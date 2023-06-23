@@ -1,0 +1,44 @@
+# do not touch this file, create new changelog file(-s)
+databaseChangeLog:
+  - changeSet:
+      id: empty-changeset-1
+      author: Eltaj Gafarli
+      changes:
+        - createTable: transactions
+          columns:
+            - column:
+               name: id
+               type: bigint
+               autoIncrement: true
+               constraints:
+                  primaryKey: true
+            - column:
+              name: type
+              type: varchar(16)
+
+            - column:
+                name: amount
+                type: number
+
+            - column:
+                name: balance
+                type: number
+            - column:
+                name: card_id
+                type: bigint
+                constraints:
+                  - references:
+
+            - column:
+                name: has_cashback
+                type: boolean
+            - column:
+                name: created_at
+                type: timestamp
+
+
+
+
+
+
+
